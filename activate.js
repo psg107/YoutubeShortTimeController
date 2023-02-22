@@ -2,20 +2,16 @@
 (function() {
     const CUSTOM_METER_ID = 'custom-progress-bar';
 
-    waitElement('#shorts-player').then(() => {
+    waitElement('#shorts-player > div.html5-video-container > video').then(() => {
 
         //init
         const videoContainer = document.querySelector('#shorts-player > div.html5-video-container');
         const video = document.querySelector("#shorts-player > div.html5-video-container > video");
-
-        //clear default progressBar
-        // const defaultProgressBars = document.querySelectorAll('#progress-bar');
-        // defaultProgressBars.forEach((p) => {
-        //     p.replaceChildren();
-        // });
         
         //create new progressBar
-        if (document.querySelector(`#${CUSTOM_METER_ID}`) == null){
+        if (document.querySelector(`#${CUSTOM_METER_ID}`) == null) {
+            console.log('[YoutubeShortTimeController] create new progressBar');
+
             let controller = document.createElement('meter');
             controller.id = CUSTOM_METER_ID;
             controller.style.width = '100%';
