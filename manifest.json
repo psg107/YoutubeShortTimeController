@@ -1,7 +1,7 @@
 {
     "name": "YoutubeShortTimeController",
     "description": "You can control the current time of YouTube Shorts with a mouse click.",
-    "version": "1.0.0.2",
+    "version": "1.0.0.3",
     "manifest_version": 3,
     "icons": {
         "128": "icon.png"
@@ -15,8 +15,6 @@
         "*://www.youtube.com/*"
     ],
     "permissions": [
-        "activeTab",
-        "tabs",
         "scripting"
     ]
 }
